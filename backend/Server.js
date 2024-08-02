@@ -9,8 +9,9 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    credentials: true,
-    origin: 'http://localhost:3000',
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    credentials: true
+    
 }));
 app.use(express.json());
 
