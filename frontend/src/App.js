@@ -16,7 +16,7 @@ function App() {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const resp = await axios.get('https://book-review-platform-api.vercel.app/api/users/profile', {
+                    const resp = await axios.get('http://localhost:4000/api/users/profile', {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }
