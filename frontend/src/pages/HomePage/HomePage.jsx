@@ -10,7 +10,7 @@ const HomePage = () => {
 
     const fetchReviews = useCallback(async () => {
         try {
-            const response = await axios.get(`http://localhost:4000/api/reviews/paginate?page=${page}&limit=3`);
+            const response = await axios.get(`https://book-review-platform-api.vercel.app/api/reviews/paginate?page=${page}&limit=3`);
             setReviews(response.data.reviews);
             setTotalPages(response.data.totalPages);
         } catch (error) {
@@ -21,7 +21,7 @@ const HomePage = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.get(`http://localhost:4000/api/reviews/search?query=${searchQuery}`);
+            const response = await axios.get(`https://book-review-platform-api.vercel.app/api/reviews/search?query=${searchQuery}`);
             setReviews(response.data);
         } catch (error) {
             console.error('Failed to search reviews:', error.message);
